@@ -56,8 +56,9 @@ else
 		echo "<tool>No Pomodoro Running</tool>"
 
 	else
+    echo "<txt>$(( rtime / 60 )):$( printf "%02d" $((rtime % 60))) min left </txt>"
 		echo "<img>$DIR/icons/running$size.png</img>"
-		echo "<tool>You have $(( rtime / 60 )):$(( rtime % 60 )) min left</tool>"
+    echo "<tool>You have $(( rtime / 60 )):$( printf '%02d' $((rtime % 60)) ) min left</tool>"
 	fi
 fi
 
